@@ -39,8 +39,35 @@
 
     <!-- ---------------------Cart products Page------------------------>
     <main class="main">
-        <h2 class="heading-2">Your Cart</h2>
-        <div class="d-flex gap wrap products-page" id="cart"></div>
+        <h2 class="heading-2 d-flex justify-center">Your Cart</h2>
+        <main class="d-flex gap justify-center">
+            <div class="d-flex gap wrap direction-column" id="cart"></div>
+            <div class="final-price d-flex direction-column gap shadow padding-all-16">
+                <div class="d-flex justify-center">Price Details</div>
+                <div class="d-flex align-center justify-space-between">
+                    <span>Price (<span class="item-count"></span>) items</span>
+                    <span>Rs <span class="product-price"></span></span>
+                </div>
+                <div class="d-flex align-center justify-space-between">
+                    <span>Discount</span>
+                    <span>Rs <span class="discount-amount"></span></span>
+                </div>
+                <div class="d-flex align-center justify-space-between">
+                    <span>Delivery Charge</span>
+                    <span>Rs 100</span>
+                </div>
+                <div class="d-flex align-center justify-space-between">
+                    <span>Total Amount</span>
+                    <span>Rs. <span class="total-amount"></span></span>
+                </div>
+                <div>
+                    You will save Rs. <span class="discount-amount"></span> on this order.
+                </div>
+                <button class="button btn-primary cursor">
+                    Place Order
+                </button>
+            </div>
+        </main>
     </main>
     <!-- ------------------------------------------------------------- -->
     <script type="module" src="cart.js"></script>
