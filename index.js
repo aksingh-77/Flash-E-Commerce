@@ -3,6 +3,8 @@ import { createProductCard } from "./createProductCard.js";
 import { findProductInCart } from "./utils/findProductInCart.js";
 
 const productContainer = document.getElementById("products");
+const filterContainer = document.querySelector(".side-bar");
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
@@ -21,6 +23,13 @@ productContainer.addEventListener("click", (event)=>{
     location.href="cart.html";
    }
 })
+
+// -------------Filter Container Login----------------------
+filterContainer.addEventListener("click", (event) => {
+    const updatedProducts = products.filter(({rating}) =>rating>=Number(event.target.dataset.rating));
+    productContainer.innerHTML = "";
+    createProductCard(updatedProducts, productContainer, findProductInCart, "products");
+});
 
 createProductCard(products, productContainer, findProductInCart, "products");
 

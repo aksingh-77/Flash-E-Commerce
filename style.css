@@ -90,10 +90,11 @@
   .side-bar {
     width: 20rem;
     position: fixed;
+    /* margin-right: 2rem; */
   }
   
   .product-container {
-    margin-left: 21rem;
+    margin-left: 15rem;
   }
   
   .heading-3 {
